@@ -1,0 +1,24 @@
+.maindivregister{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;  
+    gap:30px; 
+    align-items:center;
+}
+.registerbtn{
+    height:60px;
+    width:300px;
+    font-size:50px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cpswd{
+    width:800px;
+    font-size: 40px;
+    border-radius: 20px;
+    background-color: #000;
+    padding: 10px;
+    
+}

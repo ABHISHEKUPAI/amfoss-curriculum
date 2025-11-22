@@ -1,0 +1,43 @@
+body{
+    background-color: black;
+    justify-content: center;
+}
+.maindivhome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.subdiv{
+    display:flex;
+    align-items: center;
+    flex-direction:column;
+    gap:30px;
+}
+.blacklogo{
+    width:500px;
+    border-radius: 50px;
+}
+.signinbtn{
+    width:400px;
+    height:90px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
+.signupbtn{
+    width:400px;
+    height:90px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    margin-top: 30px;
+}
+.loginh1{
+    font-size:80px;
+}
+

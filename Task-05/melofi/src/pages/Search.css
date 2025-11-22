@@ -1,0 +1,65 @@
+.searchbar{
+    width : 1000px;
+    height:70px;
+    font-size: 50px;
+    border-radius: 30px;
+    position:absolute;
+    top:200px;
+    left:1800px;
+    padding: 10px;;
+
+}
+.maindivsearch{
+    display: flex;
+    flex-direction: column;
+    gap:150px;
+    width: 100%;  
+    max-height: 500px;
+    border:1px solid #03071e;
+
+}
+.Latestsongs{
+    display:flex;
+    flex-direction: row;
+    gap:40px;
+    white-space: nowrap ;
+    width: 100%;  
+    padding-bottom: 20px;
+    position:absolute;
+    top:600px;
+    left:800px;
+}
+
+.userhistory{
+    display:flex;
+    flex-direction: row;
+    gap:40px;
+    white-space: nowrap ;
+    width: 100%;  
+    padding-bottom: 20px;
+    position:absolute;
+    top:1300px;
+    left:800px;
+}
+.userhistorytitle{
+    position: absolute;
+    top:350px;
+    font-size: 40px;
+    left:800px
+}
+.latestsongstitle{
+    position: absolute;
+    top:1050px;
+    font-size: 40px;
+    left:800px
+
+}
+.searchsvg{
+    position:absolute;
+    top:205px;
+    left:1810px;
+
+
+}
+
+

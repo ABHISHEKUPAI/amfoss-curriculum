@@ -1,0 +1,29 @@
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 7%, 92%);
+    width: 500px;
+    height: 300px;
+    border-radius: 30px;
+    position: relative;
+}
+.photo {
+    height: 200px;
+    width:450px;
+    margin-top: 65px;
+    border-radius: 20px;
+    position: relative;
+    top: 5%;
+}
+.name{
+    margin-bottom: 50px;;
+    font-size: 50px;
+    font-family: monospace;
+    color: #000;
+    position:relative;
+    bottom: 5%;
+}
+
+

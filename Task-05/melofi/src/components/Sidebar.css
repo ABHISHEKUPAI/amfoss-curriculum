@@ -1,0 +1,33 @@
+.sidebar {
+    width: 500px;
+    height: 100vh;
+    background-color: hsl(0, 5%, 82%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+.profile-img {
+   width: 350px;
+   border-radius: 50%;
+}
+
+.btngrp{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    gap:30px;
+
+}
+.btn-search, .btn-home, .btn-playlist {
+   width: 500px;
+   padding: 30px;
+   font-size: 30px;
+
+}
+
+.logo-img {
+   width: 100%;
+}
