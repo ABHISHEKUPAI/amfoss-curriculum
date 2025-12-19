@@ -1,0 +1,24 @@
+.maindivpop {
+    position: absolute;
+    right: 3vh;
+    background: #1a1a1a;
+    padding: 1vw;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: .5vh;
+}
+
+.maindivpop button {
+    background: #333;
+    color: white;
+    width:15vw;
+    height: 3vh;
+    font-size: 2vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+

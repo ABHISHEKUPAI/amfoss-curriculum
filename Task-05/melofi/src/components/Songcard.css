@@ -1,29 +1,22 @@
 .box{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: hsl(0, 7%, 92%);
-    width: 500px;
-    height: 300px;
+    width: 28vh;
+    height: 18vh;
     border-radius: 30px;
-    position: relative;
+    
 }
 .photo {
-    height: 200px;
-    width:450px;
-    margin-top: 65px;
-    border-radius: 20px;
-    position: relative;
-    top: 5%;
+    height: 10vh;
+    width:clamp(3vw,12vw,15vw);
+    margin-top:0.5vh;
+    border-radius: 2vh;
 }
 .name{
-    margin-bottom: 50px;;
-    font-size: 50px;
+    margin-bottom: 3vh;
+    font-size: 3vh;
     font-family: monospace;
-    color: #000;
-    position:relative;
-    bottom: 5%;
+    color: #000;   
 }
-
-

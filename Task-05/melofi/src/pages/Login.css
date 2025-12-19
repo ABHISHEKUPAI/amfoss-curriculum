@@ -1,13 +1,13 @@
-body{
-    background-color: black;
-    justify-content: center;
-}
-.maindivhome{
+.maindivlogin{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 30vh;
+    min-height: 100vh;
+    background-color: black;
 }
+
 .subdiv{
     display:flex;
     align-items: center;
@@ -15,29 +15,42 @@ body{
     gap:30px;
 }
 .blacklogo{
-    width:500px;
+    width:60%;
+    max-width: 500px;
     border-radius: 50px;
 }
-.signinbtn{
-    width:400px;
-    height:90px;
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.email{ 
+    width:100%;
+    max-width:800px ;
+    font-size: 40px;
+    border-radius: 20px;
+    background-color: black;
+    margin-bottom: 30px;
+    margin-top:30px;
     font-family: monospace;
 }
-.signupbtn{
-    width:400px;
-    height:90px;
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.pswd{
+    width:800px;
+    font-size: 40px;
+    border-radius: 20px;
+    padding: 10px; 
+    background-color: black;
     font-family: monospace;
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
-.loginh1{
-    font-size:80px;
+.signinbtn,
+.signupbtn {
+  width: 100%;
+  max-width: 350px;
+  padding: 18px;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  border-radius: 15px;
+  cursor: pointer;
 }
+
+
 

@@ -7,6 +7,7 @@ import Search from "./pages/Search";
 import Player from "./pages/Player";
 import { BrowserRouter ,Routes,Route} from "react-router-dom";
 import Lyrics from "./pages/Lyrics";
+import Playlistholder from "./pages/Playlistholder";
 
 
 function App (){
@@ -21,11 +22,11 @@ function App (){
     <Route path="/Player" element={<Player />}/>
     <Route path="/Search" element={<Search />}/>
     <Route path="/Lyrics" element={<Lyrics />}/>
-
-
+    <Route path="/Playlistholder" element={<Playlistholder/>}/>
   </Routes>
   </BrowserRouter>
   );
+  
 } 
 
 export default App;

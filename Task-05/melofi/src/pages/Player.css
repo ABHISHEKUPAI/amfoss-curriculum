@@ -1,0 +1,32 @@
+.playersong {
+  font-size: 80px;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: 52vw;
+  bottom:25vh;   
+}
+.controls{
+    height:10vh;
+    width:50vh;
+    background-color: hsl(0, 3%, 17%);
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    border-radius: 150px;
+    padding: 30px;
+    gap:40px;
+
+}
+.maindivplayer{
+    background-color: black;
+    min-height: 100vh;  
+    width: 100%;
+}
+.playerphoto{
+    position:absolute;
+    top:10vh;
+    left: 42vw;
+    width: 55vh;
+}

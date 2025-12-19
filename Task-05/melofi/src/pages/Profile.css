@@ -4,4 +4,11 @@
     flex-direction: column;
     gap:30px;
     position:absolute;
-    top:500px;}
+    top:30vh;
+    left:50vw;
+}
+.maindivprofile{
+    min-width: 30vh;
+    min-height: 100vh;background-color: black;
+
+}

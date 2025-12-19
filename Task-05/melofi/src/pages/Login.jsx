@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Login(){
 
     return(
-        <div className='maindivhome'>
+        <div className='maindivlogin'>
             
             <img className="blacklogo" src={blacklogo} alt="logomelofi"/>
             <div className = "subdiv">
