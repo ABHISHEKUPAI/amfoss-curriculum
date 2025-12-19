@@ -39,7 +39,7 @@ function Player() {
             
                 </div>
                 {showPopup && (
-                    <Popup closePopup={() => sethowPopup(false)} />
+                    <Popup closePopup={() => setshowPopup(false)} />
                 )}
             </div>
         </div>

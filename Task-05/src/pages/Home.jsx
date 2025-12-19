@@ -34,17 +34,17 @@ function Home() {
               <Link to="/Player">
                 <Songcard  />
               </Link>
-              <Songcard className={2} />
-              <Songcard className={3} />
-              <Songcard className={4} />
+              <Songcard />
+              <Songcard />
+              <Songcard />
             </div>
             <div className="Songcard2">
               <Link to="/Player">
-                <Songcard id={1} />
+                <Songcard />
               </Link>
-              <Songcard className={2} />
-              <Songcard className={3} />
-              <Songcard className={4} />
+              <Songcard />
+              <Songcard />
+              <Songcard />
             </div>
             <div className="Songcard1">
                 <Link to="/Playlistholder">

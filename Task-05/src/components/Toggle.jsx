@@ -3,14 +3,15 @@ import play from "../assets/play.svg";
 import pause from "../assets/pause.svg";
 
 function ToggleImage() {
-  const [First,ShowFirst] = useState(true);
+  const [isplaying, setisplaying] = useState(true);
+
 
   return (
     <div>
       <img
-        src={First ? pause : play}
+        src={isplaying ? pause : play}
         alt="toggle"
-        onClick={() =>ShowFirst(!First)}
+        onClick={() =>setisplaying(!isplaying)}
         style={{ width: "200px", cursor: "pointer" }}
       />
     </div>
