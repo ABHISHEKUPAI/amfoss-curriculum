@@ -1,12 +1,11 @@
 .sidebar{
-    position:absolute;
-    left:0vh;
+    position:sticky;
     top:0vh;
 }
 .title1{
     position: absolute;
     top:3vh;
-    left:20vw;
+    left:23vw;
     font-size: 1.5vh;
     font-family: monospace;
 }
@@ -14,23 +13,23 @@
 .title2{
   position: absolute;
   top:35vh;
-  left:20vw;
+  left:23vw;
   font-size: 1.5vh;
   font-family: monospace;
 }
 .title3{
   position: absolute;
   top:65vh;
-  left:20vw;
+  left:23vw;
   font-size: 1.5vh;
   font-family: monospace;
 }
 .maindivhome {
   display: grid;
   position:absolute;
-  gap:12vh;
-  top:15vh;
-  left:20vw;
+  gap:10vh;
+  top:13vh;
+  left:23vw;
 }
 .Songcard1,.Songcard2{
     display: flex;
@@ -39,7 +38,6 @@
     align-items: center;
 }
 .homepage{
-  margin: 0;
   display: flex;
   place-items: center;
   min-width: 30vh;

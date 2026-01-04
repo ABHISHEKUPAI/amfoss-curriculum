@@ -44,7 +44,7 @@ function Playlist() {
                     <Playlistcard image={happyvibes} title="Happy Songs" />
                 </Link>
                 <Playlistcard image={me} title="Sigma Songs" />
-                <Playlistcard image={logo} title="custom playlist" />
+                <Playlistcard image={logo} title="custom " />
             </div>
 
         </div>

@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center;
     background-color: hsl(0, 7%, 92%);
-    width: 28vh;
-    height: 18vh;
+    width: auto;
+    height: auto;
     border-radius: 30px;
     
 }
