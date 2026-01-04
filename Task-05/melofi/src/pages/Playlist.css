@@ -13,14 +13,14 @@
 .maindivplaylist {
   display: grid;
   position:absolute;
-  gap:200px;
+  gap:150px;
   top:15vh;
   left:30vw;
 }
 .playlistcard1,.playlistcard2,.playlistcard3{
     display: flex;
     flex-direction: row;
-    gap: 7vh;
+    gap: 5vh;
     align-items: center;
 }
 .playlistpage{

@@ -6,8 +6,8 @@ function Songcard(){
     <>
     <button className="box">
         <img className="photo" 
-             src = {logo} 
-             alt= "song image"
+            src = {logo} 
+            alt= "song image"
         />
         <p className = "name">songname</p>
 

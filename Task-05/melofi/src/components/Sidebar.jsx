@@ -14,13 +14,12 @@ function Sidebar() {
                 className="profile-img"  
             />
             </Link>
-          
             <div className = "btngrp">
                 <Link to="/Search">
                 <button className="btn-search">Search</button>
                 </Link>
                 <Link to="/Home">
-                 <button className="btn-home">Home</button>
+                <button className="btn-home">Home</button>
                 </Link>
                 <Link to="/Playlist">
                 <button className="btn-playlist">Playlist</button>

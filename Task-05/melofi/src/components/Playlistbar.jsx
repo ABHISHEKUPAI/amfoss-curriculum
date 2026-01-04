@@ -11,17 +11,16 @@ function Playlistbar(){
         <Link to ="/Player">
             <button className="buttonplaylistbar">
             <img className="photoplaylist"
-                 src = {logo}
-                 alt= "playlist image"
+                    src = {logo}
+                    alt= "playlist image"
             />
             <p className = "nameplaylist">Song Name</p>
             </button>
         </Link>
-       
             <img onClick={() => alert("Song removed")}className="playlistlogoonbar"
-                 src={dustbin}
-                 alt="dustbin"
-                 height="100px"
+                    src={dustbin}
+                    alt="dustbin"
+                    height="100px"
             />
     </div>
 

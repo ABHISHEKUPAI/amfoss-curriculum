@@ -1,12 +1,12 @@
 .sidebar {
-    width: 15vw;
-    height: 100vh;
-    background-color: hsl(0, 5%, 82%);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;  
+      width: 15vw;
+      height: 100vh;
+      background-color: hsl(0, 5%, 82%);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;  
 }
 
 .profile-img {
@@ -15,10 +15,10 @@
 }
 
 .btngrp{
-    display:flex;
-    flex-direction: column;
-    width:100%;
-    gap:30px;
+      display:flex;
+      flex-direction: column;
+      width:100%;
+      gap:30px;
 
 }
 .btn-search, .btn-home, .btn-playlist {
