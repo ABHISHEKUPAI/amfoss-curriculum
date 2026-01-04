@@ -20,7 +20,7 @@
 .playlistcard1,.playlistcard2,.playlistcard3{
     display: flex;
     flex-direction: row;
-    gap: 5vh;
+    gap: 10vh;
     align-items: center;
 }
 .playlistpage{
