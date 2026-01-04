@@ -1,11 +1,11 @@
 .searchbar{
-    width : 1000px;
+    width : min(90%,1500px);
     height:70px;
     font-size: 50px;
     border-radius: 30px;
     position:absolute;
-    top:15vh;
-    left:45vw;
+    top:10vh;
+    left:23vw;
     padding: 10px;;
 }
 .searchpagewrapper{
@@ -27,7 +27,7 @@
     gap:2vh;  
     padding-bottom: 1vh;
     position:absolute;
-    top:27vh;
+    top:30vh;
     left:25vw;
 }
 .userhistory{
@@ -36,18 +36,18 @@
     gap:2vh; 
     padding-bottom:1vh;
     position:absolute;
-    top:67vh;
+    top:70vh;
     left:25vw;
 }
 .userhistorytitle{
     position: absolute;
-    top:10vh;
+    top:15vh;
     font-size: 2vh;
     left:40vh;
 }
 .latestsongstitle{
     position: absolute;
-    top:50vh;
+    top:55vh;
     font-size: 2vh;
     left:40vh;
 }
