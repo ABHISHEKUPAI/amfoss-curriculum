@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     background-color: hsl(0, 3%, 75%);
     width: 50vw;
     height: 18vh;
     border-radius: 30px;
     margin-bottom: 3vh;
-    
 }
 .photoplaylist {
     height: 15vh;
@@ -22,7 +22,8 @@
     margin-left: 5vh;
 }
 .playlistlogoonbar{
-    margin-left: 20vh;
+    padding-right:3vw;
+    
 }
 .playlistwrapper{
     display: flex;

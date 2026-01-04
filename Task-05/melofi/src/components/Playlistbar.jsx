@@ -23,10 +23,7 @@ function Playlistbar(){
                     height="100px"
             />
     </div>
-
-    
     </>
     );
-
 }
 export default Playlistbar;

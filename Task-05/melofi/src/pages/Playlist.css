@@ -1,28 +1,30 @@
 .sidebar{
-    position:sticky;
+    position:absolute;
+    left:0vh;
     top:0vh;
 }
 .title1{
     position: absolute;
     top:3vh;
-    left:23vw;
+    left:20vw;
     font-size: 1.5vh;
     font-family: monospace;
 }
 .maindivplaylist {
   display: grid;
   position:absolute;
-  gap:100px;
+  gap:150px;
   top:15vh;
-  left:33vw;
+  left:30vw;
 }
 .playlistcard1,.playlistcard2,.playlistcard3{
     display: flex;
     flex-direction: row;
-    gap: 10vh;
+    gap: 5vh;
     align-items: center;
 }
 .playlistpage{
+  margin: 0;
   display: flex;
   place-items: center;
   min-width: 30vh;
