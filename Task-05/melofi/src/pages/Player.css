@@ -1,10 +1,10 @@
 .playersong {
-  font-size: 80px;
-  color: white;
-  font-weight: bold;
-  position: absolute;
-  left: 52vw;
-  bottom:25vh;   
+    font-size: 80px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    left: 52vw;
+    bottom:25vh;   
 }
 .controls{
     height:10vh;

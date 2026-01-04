@@ -7,7 +7,6 @@
     min-height: 100vh;
     background-color: black;
 }
-
 .subdiv{
     display:flex;
     align-items: center;
@@ -40,16 +39,16 @@
 }
 .signinbtn,
 .signupbtn {
-  width: 100%;
-  max-width: 350px;
-  padding: 18px;
-  font-size: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: monospace;
-  border-radius: 15px;
-  cursor: pointer;
+    width: 100%;
+    max-width: 350px;
+    padding: 18px;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    border-radius: 15px;
+    cursor: pointer;
 }
 
 

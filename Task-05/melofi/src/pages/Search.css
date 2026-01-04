@@ -4,10 +4,9 @@
     font-size: 50px;
     border-radius: 30px;
     position:absolute;
-    top:200px;
-    left:1800px;
+    top:15vh;
+    left:45vw;
     padding: 10px;;
-
 }
 .searchpagewrapper{
     background-color: black;
@@ -28,8 +27,8 @@
     gap:2vh;  
     padding-bottom: 1vh;
     position:absolute;
-    top:32vh;
-    left:20vw;
+    top:27vh;
+    left:25vw;
 }
 .userhistory{
     display:flex;
@@ -37,25 +36,21 @@
     gap:2vh; 
     padding-bottom:1vh;
     position:absolute;
-    top:68vh;
-    left:20vw;
+    top:70vh;
+    left:25vw;
 }
 .userhistorytitle{
     position: absolute;
-    top:15vh;
+    top:10vh;
     font-size: 2vh;
     left:40vh;
 }
 .latestsongstitle{
     position: absolute;
-    top:55vh;
+    top:50vh;
     font-size: 2vh;
     left:40vh;
 }
-.searchsvg{
-    position:absolute;
-    top:205px;
-    left:1810px;
-}
+
 
 

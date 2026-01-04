@@ -12,7 +12,7 @@ function ToggleImage() {
         src={isplaying ? pause : play}
         alt="toggle"
         onClick={() =>setisplaying(!isplaying)}
-        style={{ width: "200px", cursor: "pointer" }}
+        style={{ width: "100px", cursor: "pointer" }}
       />
     </div>
   );

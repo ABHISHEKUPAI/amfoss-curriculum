@@ -18,17 +18,13 @@ function Playlist() {
     return (
         <>
         <div className="playlistpage">
-      
         <Sidebar />
 
         <div className="contents">
-
-          <div className="title1">
+        <div className="title1">
             <h1>Playlist</h1>
-          </div>
-
-          <div className="maindivplaylist">
-
+        </div>
+        <div className="maindivplaylist">
             <div className="playlistcard1">
                 <Link to="/Playlistholder">
                     <Playlistcard image={devotional} title="Devotional" />
@@ -42,7 +38,6 @@ function Playlist() {
                 </Link>
                 <Playlistcard image={english} title="English" />
                 <Playlistcard image={sadvibes} title="Sad Songs" />
-              
             </div>
             <div className="playlistcard3">
                 <Link to="/Playlistholder">
@@ -50,15 +45,12 @@ function Playlist() {
                 </Link>
                 <Playlistcard image={me} title="Sigma Songs" />
                 <Playlistcard image={logo} title="custom playlist" />
-               
             </div>
 
-          </div>
+        </div>
 
         </div>
     </div>
-  
-       
         </>
         
     );

@@ -15,9 +15,7 @@ function Home() {
     <div className="homepage">
       
         <Sidebar />
-
         <div className="contents">
-
           <div className="title1">
             <h1>Recommendation</h1>
           </div>
@@ -27,9 +25,7 @@ function Home() {
           <div className="title3">
             <h1>Your Playlist </h1>
           </div>
-
           <div className="maindivhome">
-
             <div className="Songcard1">
               <Link to="/Player">
                 <Songcard  />
@@ -52,11 +48,9 @@ function Home() {
                 </Link>
                 <Playlistcard image={motivational} title="Motivational"/>
                 <Playlistcard image={devotional} title="Devotional"/>
-                <Playlistcard image={happyvibes} title="Happy Songs"/>
+                <Playlistcard image={happyvibes} title="HappySongs"/>
             </div>
-
           </div>
-
         </div>
     </div>
     </>

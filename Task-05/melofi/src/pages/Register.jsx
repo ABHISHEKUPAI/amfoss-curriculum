@@ -9,14 +9,14 @@ function Register(){
         <div className="maindivregister" >
             <img className = 'blacklogo' src = {blacklogo} alt= "logo"/>
             <input type='email'
-                   className="email"
-                   placeholder=" Email:-"/>
+                    className="email"
+                    placeholder=" Email:-"/>
             <input type='password'
                     className='pswd'
-                    placeholder=' password:'/>
+                    placeholder=' Password:'/>
             <input type = 'password'
-                   className = 'cpswd'
-                   placeholder=' confirm password:'/>
+                    className = 'cpswd'
+                    placeholder=' Confirm Password:'/>
             <Link to ="/Home">
             <button className="  registerbtn">Register</button>
             </Link>

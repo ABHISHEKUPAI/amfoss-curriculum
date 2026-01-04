@@ -34,7 +34,7 @@ function Player() {
                     <img onClick={() => alert("playing next song")}className = "rightsvg" src={right} width="2500"  alt="right arrow"style = {{cursor:"pointer"}}/>
                     <img onClick={() => setshowPopup(!showPopup)}className = "playlistsvg" src = {playlist} width="1400" alt = "playlist adder" style = {{cursor:"pointer"}}/>
                     <Link to="/Lyrics">
-                    <img className = "lyricssvg" src = {lyrics} width="140" alt = "lyrics button"style = {{cursor:"pointer"}}/>
+                    <img className = "lyricssvg" src = {lyrics} width="100" alt = "lyrics button"style = {{cursor:"pointer"}}/>
                     </Link>
             
                 </div>

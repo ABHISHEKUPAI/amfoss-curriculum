@@ -3,25 +3,25 @@
     left:0vh;
     top:0vh;
 }
-
 .title1{
     position: absolute;
     top:3vh;
-    left:25vw;
+    left:20vw;
     font-size: 1.5vh;
     font-family: monospace;
 }
+
 .title2{
   position: absolute;
   top:35vh;
-  left:25vw;
+  left:20vw;
   font-size: 1.5vh;
   font-family: monospace;
 }
 .title3{
   position: absolute;
   top:65vh;
-  left:25vw;
+  left:20vw;
   font-size: 1.5vh;
   font-family: monospace;
 }
@@ -30,7 +30,7 @@
   position:absolute;
   gap:12vh;
   top:15vh;
-  left:25vw;
+  left:20vw;
 }
 .Songcard1,.Songcard2{
     display: flex;
