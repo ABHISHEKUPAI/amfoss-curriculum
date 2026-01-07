@@ -33,6 +33,7 @@ function Home() {
               <Songcard />
               <Songcard />
               <Songcard />
+            
             </div>
             <div className="Songcard2">
               <Link to="/Player">

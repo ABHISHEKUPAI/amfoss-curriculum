@@ -30,8 +30,20 @@ function Search() {
                     <Songcard className="s2"/>
                     <Songcard className="s3"/>
                     <Songcard className="s4"/>
+                    <Link to= "/Player">
+                    <Songcard className="s1"/>
+                    </Link>
+                    <Songcard className="s2"/>
+                    <Songcard className="s3"/>
+                    <Songcard className="s4"/>
                 </div>
                 <div className="Latestsongs">
+                    <Link to= "/Player">
+                    <Songcard className="s6"/>
+                    </Link>
+                    <Songcard className="s7"/>
+                    <Songcard className="s8"/>
+                    <Songcard className="s9"/>
                     <Link to= "/Player">
                     <Songcard className="s6"/>
                     </Link>

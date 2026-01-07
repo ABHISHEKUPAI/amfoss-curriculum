@@ -36,6 +36,8 @@
     flex-direction: row;
     gap: 7vh;
     align-items: center;
+   
+
 }
 .homepage{
   display: flex;

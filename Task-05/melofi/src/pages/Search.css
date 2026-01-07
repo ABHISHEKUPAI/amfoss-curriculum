@@ -29,6 +29,8 @@
     position:absolute;
     top:30vh;
     left:25vw;
+    overflow-x:auto;
+    width: 58vw;
 }
 .userhistory{
     display:flex;
@@ -38,6 +40,8 @@
     position:absolute;
     top:70vh;
     left:25vw;
+    overflow-x:auto;
+    width: 58vw;
 }
 .userhistorytitle{
     position: absolute;
