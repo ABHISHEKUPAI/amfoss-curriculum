@@ -1,30 +1,62 @@
 import "./Login.css";
 import blacklogo from "../assets/logoblack.png";
 import "../global.css";
-import { Link } from "react-router-dom";
-function Login(){
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-    return(
-        <div className='maindivlogin'>
-            
-            <img className="blacklogo" src={blacklogo} alt="logomelofi"/>
-            <div className = "subdiv">
-                <h1 className="loginh1">Login</h1>
-                <input  type = "email"
-                        className = "email"
-                        placeholder = " Email:- "/>
-                <input  type = "password"
-                        className = "pswd"
-                        placeholder = " Password:- "/>
-                <Link to="/Home">
-                <button  className='signinbtn' >LOGIN </button>
-                </Link>
-                <Link to="/Register">
-                <button  className='signupbtn' >SIGN UP </button>
-                </Link>
-                
-            </div>
-        </div>
-    );
+function Login() {
+const [email, setemail] = useState("");
+const [password, setpassword] = useState("");
+const [error, seterror] = useState("");
+const navigate = useNavigate();
+
+const handleLogin = async () => {
+    seterror("");
+    const response = await fetch("http://localhost:5000/Login", {
+        method: "POST",
+        headers: {"Content-Type": "application/json",},
+        body: JSON.stringify({
+        email: email,
+        password: password,
+        }),
+    });
+    const data = await response.json();
+    if (!response.ok) {
+        seterror(data.error);
+        return;
+    }
+    navigate("/Home");
+} 
+
+return (
+    <div className="maindivlogin">
+    <img className="blacklogo" src={blacklogo} alt="logomelofi" />
+    <div className="subdiv">
+        <h1 className="loginh1">Login</h1>
+        <input
+        type="email"
+        className="email"
+        placeholder=" Email:- "
+        value={email}
+        onChange={(e) => setemail(e.target.value)}
+        />
+        <input
+        type="password"
+        className="pswd"
+        placeholder=" Password:- "
+        value={password}
+        onChange={(e) => setpassword(e.target.value)}
+        />
+        <button className="signinbtn" onClick={handleLogin}>
+        LOGIN
+        </button>
+        {error && <p style={{ color: "red" }}>{error}</p>}
+        <Link to="/Register">
+        <button className="signupbtn">SIGN UP</button>
+        </Link>
+    </div>
+    </div>
+);
 }
+
 export default Login;

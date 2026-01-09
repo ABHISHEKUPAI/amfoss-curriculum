@@ -19,10 +19,10 @@ function Playlistholder() {
                   <Playlistbar className="playbar2"/>
                   <Playlistbar className="playbar3"/>
                   <Playlistbar className="playbar4"/>
-                  <Playlistbar className="playbar1"/>
-                  <Playlistbar className="playbar2"/>
-                  <Playlistbar className="playbar3"/>
-                  <Playlistbar className="playbar4"/>
+                  <Playlistbar className="playbar5"/>
+                  <Playlistbar className="playbar6"/>
+                  <Playlistbar className="playbar7"/>
+                  <Playlistbar className="playbar8"/>
         
           </div>
         

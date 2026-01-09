@@ -1,16 +1,19 @@
+import logo from "../assets/logo.png";
 import "./Songcard.css";
 
-function Playlistcard({ image, title }) {
-    return (
-        <button className="box">
-            <img
-                className="photo"
-                src={image}
-                alt={title}
-            />
-            <p className="name">{title}</p>
-        </button>
-    );
-}
+function Songcard(){
+    return(
+    <>
+    <button className="box">
+        <img className="photo" 
+            src = {logo} 
+            alt= "playlist image"
+        />
+        <p className = "name">Playlist </p>
 
-export default Playlistcard;
+    </button>
+    </>
+    );
+
+}
+export default Songcard;

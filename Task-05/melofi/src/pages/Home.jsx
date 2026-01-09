@@ -4,10 +4,7 @@ import Songcard from "../components/Songcard";
 import { Link } from "react-router-dom";
 import Playlistcard from "../components/Playlistcard";
 import "./Home.css";
-import motivational from "../assets/motivational.png";
-import favorates from "../assets/favorates.png";
-import happyvibes from"../assets/happyvibes.png";
-import devotional from"../assets/devotional.png";
+
 
 function Home() {
   return (
@@ -45,11 +42,11 @@ function Home() {
             </div>
             <div className="Songcard1">
                 <Link to="/Playlistholder">
-                <Playlistcard image={favorates} title="Favorates"/>
+                <Playlistcard />
                 </Link>
-                <Playlistcard image={motivational} title="Motivational"/>
-                <Playlistcard image={devotional} title="Devotional"/>
-                <Playlistcard image={happyvibes} title="HappySongs"/>
+                <Playlistcard />
+                <Playlistcard />
+                <Playlistcard />
             </div>
           </div>
         </div>

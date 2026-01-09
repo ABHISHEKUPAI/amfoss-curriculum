@@ -3,19 +3,25 @@
     left:0vh;
     top:0vh;
 }
-.title1{
+.titleplaylist{
     position: absolute;
     top:3vh;
     left:23vw;
-    font-size: 1.5vh;
+    font-size: 1.5rem;
     font-family: monospace;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width:65vw;;
+    
 }
 .maindivplaylist {
   display: grid;
   position:absolute;
-  gap:100px;
   top:15vh;
   left:30vw;
+  overflow-y:auto;
+  height:82vh;
 }
 .playlistcard1,.playlistcard2,.playlistcard3{
     display: flex;
