@@ -11,7 +11,7 @@ function Register() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const handleRegister = async () => {
-    setError("");
+  setError("");
     if (password !== confirmPassword) {
       setError("Passwords do not match");
       return;

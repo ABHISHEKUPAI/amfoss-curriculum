@@ -13,26 +13,11 @@
     height: 15vh;
     width:clamp(3vw,12vw,15vw);
     margin-top:0.5vh;
+    margin-left: 1vw;
     border-radius: 2vh;
 }
-.nameplaylist{
-    font-size: 3vh;
-    font-family: monospace;
-    color: #000; 
-    margin-left: 5vh;
-}
-.playlistlogoonbar{
-    padding-right:3vw;
-    
-}
-.playlistwrapper{
-    display: flex;
-    flex-direction: column;
-}
-.buttonplaylistbar{
-    display:flex;
-    align-items: center;
-    background-color: hsl(0, 3%, 75%);
-    border-radius: 2vh;
-
+.dustbin{
+    position:fixed;
+    right:1vh;
+    widows: 100vw;
 }

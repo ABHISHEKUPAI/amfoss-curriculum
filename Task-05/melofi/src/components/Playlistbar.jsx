@@ -1,29 +1,36 @@
-import logo from "../assets/logoblack.png";
-import "./Playlistbar.css";
-import dustbin from"../assets/delete.svg";
 import { Link } from "react-router-dom";
+import "./Playlistbar.css";
+import dustbin from "../assets/delete.svg";
 
-function Playlistbar(){
-    return(
-    <>
-    <div className="boxplaylist">
-        
-        <Link to ="/Player">
-            <button className="buttonplaylistbar">
-            <img className="photoplaylist"
-                    src = {logo}
-                    alt= "playlist image"
-            />
-            <p className = "nameplaylist">Song Name</p>
-            </button>
-        </Link>
-            <img onClick={() => alert("Song removed")}className="playlistlogoonbar"
-                    src={dustbin}
-                    alt="dustbin"
-                    height="100px"
-            />
-    </div>
-    </>
-    );
+function Playlistbar({song,onDelete}){
+  return(
+  <div className="boxplaylist">
+    <Link 
+      to ="/player"
+      state={{
+          title:song.title,
+          image:song.image,
+          artistname:song.artist,
+          previewurl:song.song_url,
+        }}
+        className="buttonplaylistbar" 
+    >
+      <img
+        className="photoplaylist"
+        src={song.image}
+        alt={song.title}
+      />
+      <p className="nameplaylist">{song.title}</p>
+    </Link>
+    <img
+      src={dustbin}
+      alt="delete"
+      className="playlistlogobar"
+      onClick={() => onDelete(song.id)}
+      style={{cursor:"pointer"}}
+    />
+  </div>
+ );
+
 }
 export default Playlistbar;

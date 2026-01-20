@@ -6,7 +6,6 @@ import Profile from "./pages/Profile";
 import Search from "./pages/Search";
 import Player from "./pages/Player";
 import { BrowserRouter ,Routes,Route} from "react-router-dom";
-import Lyrics from "./pages/Lyrics";
 import Playlistholder from "./pages/Playlistholder";
 
 
@@ -21,8 +20,9 @@ function App (){
     <Route path="/Playlist" element={<Playlist />}/>
     <Route path="/Player" element={<Player />}/>
     <Route path="/Search" element={<Search />}/>
-    <Route path="/Lyrics" element={<Lyrics />}/>
     <Route path="/Playlistholder" element={<Playlistholder/>}/>
+    <Route path="/playlistholder/:playlistId" element={<Playlistholder />} />
+    
   </Routes>
   </BrowserRouter>
   );

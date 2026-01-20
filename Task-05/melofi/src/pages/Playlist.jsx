@@ -1,53 +1,68 @@
-import Playlistcard from "../components/Playlistcard";
 import Sidebar from "../components/Sidebar";
 import "../global.css";
-import { Link } from "react-router-dom";
 import "./Playlist.css";
 import add from "../assets/add.svg";
-import Playlisttab from"../components/Playlisttab";
-import {useState} from "react";
-
+import Playlisttab from "../components/Playlisttab";
+import { useEffect, useState } from "react";
 
 function Playlist() {
-    const [playlists, setPlaylists] = useState([
-    { id: 1, name: "Playlist 1" },
-    { id: 2, name: "Playlist 2" },
-    { id: 3, name: "Playlist 3" },
-    { id: 4, name: "Playlist 4" },
-]);
+  const [playlists, setPlaylists] = useState([]);
+  const userId = localStorage.getItem("user_id");
 
-const addPlaylist = () => {
-    const nextNumber = playlists.length + 1;
-    const newPlaylist = {
-    id: Date.now(),
-    name: `Playlist ${nextNumber}`,
-    };
-    setPlaylists([...playlists, newPlaylist]);
-};
-    return (
-        <>
-        <div className="playlistpage">
-        <Sidebar />
-        <div className="contents"title1>
+  useEffect(() => {
+    if (!userId) return;
+
+    fetch(`http://localhost:5000/playlists?user_id=${userId}`)
+      .then((res) => res.json())
+      .then((data) => {setPlaylists(data);})
+      .catch((err) => {console.error(err);});
+  }, [userId]);
+
+  const addPlaylist = async () => {
+    const name = prompt("Enter playlist name");
+    if (!name) return;
+
+    const res = await fetch("http://localhost:5000/playlists", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ user_id: userId, name }),
+    });
+    
+    await res.json();
+
+    fetch(`http://localhost:5000/playlists?user_id=${userId}`)
+      .then((res) => res.json())
+      .then((data) => setPlaylists(data));
+  };
+
+
+  return (
+    <div className="playlistpage">
+      <Sidebar />
+
+      <div className="contents">
         <div className="titleplaylist">
-            <h1>Playlist</h1>
-            <div>
-                <img src={add} height= "100vh" style={{cursor : "pointer"}}onClick={addPlaylist}/>
-            </div>
+          <h1>Playlist</h1>
+          <img
+            src={add}
+            width="80vh"
+            alt="add"
+            onClick={addPlaylist}
+            style={{ cursor: "pointer" }}
+          />
         </div>
+
         <div className="maindivplaylist">
-        {playlists.map((playlist) => (
-        <Playlisttab
-        key={playlist.id}
-        playlistName={playlist.name}
-    />
-))}
+          {playlists.map((p) => (
+            <Playlisttab
+              id={p.id}
+              playlistName={p.name}
+            />
+          ))}
+        </div>
+      </div>
     </div>
-        </div>
-        </div>
-        </>
-        
-    );
+  );
 }
 
 export default Playlist;

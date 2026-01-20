@@ -1,31 +1,16 @@
 import logo from "../assets/logo.png";
 import "./Playlisttab.css";
-import dustbin from "../assets/delete.svg";
 import { Link } from "react-router-dom";
 
-function Playlistbar({ playlistName }) {
-return (
+function Playlisttab({ id, playlistName}) {
+  return (
     <div className="boxplaylist">
-    <Link to="/Playlistholder">
-        <button className="buttonplaylistbar">
-        <img
-            className="photoplaylist"
-            src={logo}
-            alt="playlist image"
-        />
+      <Link to={`/playlistholder/${id}`} className="buttonplaylistbar">
+        <img className="photoplaylist" src={logo} alt="playlist" />
         <p className="nameplaylist">{playlistName}</p>
-        </button>
-    </Link>
-
-    <img
-        onClick={() => alert(`${playlistName} removed`)}
-        className="playlistlogoonbar"
-        src={dustbin}
-        alt="dustbin"
-        height="100px"
-    />
+      </Link>
     </div>
-);
+  );
 }
 
-export default Playlistbar;
+export default Playlisttab;

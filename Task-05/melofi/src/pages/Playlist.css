@@ -22,6 +22,7 @@
   left:30vw;
   overflow-y:auto;
   height:82vh;
+  scrollbar-width: none;
 }
 .playlistcard1,.playlistcard2,.playlistcard3{
     display: flex;

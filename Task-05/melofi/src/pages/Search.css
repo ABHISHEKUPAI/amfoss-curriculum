@@ -21,42 +21,26 @@
     max-height: 500px;
     border:1px solid #03071e;
 }
-.Latestsongs{
+.userhistorybox{
+   
     display:flex;
     flex-direction: row;
     gap:2vh;  
     padding-bottom: 1vh;
     position:absolute;
-    top:30vh;
-    left:25vw;
+    top:40vh;
+    left:23vw;
     overflow-x:auto;
-    width: 65vw;
+    width: 70vw;
     scrollbar-width: none;
 }
-.userhistory{
-    display:flex;
-    flex-direction: row;
-    gap:2vh; 
-    padding-bottom:1vh;
-    scrollbar-width: none;
-    position:absolute;
-    top:70vh;
-    left:25vw;
-    overflow-x:auto;
-    width: 65vw;
-}
-.userhistorytitle{
+.searchtitle{
     position: absolute;
-    top:15vh;
+    top:20vh;
     font-size: 2vh;
     left:40vh;
 }
-.latestsongstitle{
-    position: absolute;
-    top:55vh;
-    font-size: 2vh;
-    left:40vh;
-}
+
 
 
 

@@ -1,27 +1,52 @@
+import "../global.css";
 import "./Popup.css";
+import { useEffect, useState } from "react";
 
-function Popup({ closePopup }) {
-    const handleClick = (playlistName) => {
-        alert(`Song added to your ${playlistName} playlist`);
-        closePopup();
-    };
+function Popup({ song, onClose }) {
+  const [playlistspop, setPlaylistspop] = useState([]);
+  const userId = localStorage.getItem("user_id");
 
-    
-    return(
-        <div className="maindivpop">
-            <button onClick={() => handleClick("Favorates")}>Your Favorates</button>
-            <button onClick={() => handleClick("Motivational Songs")}>Motivational Songs</button>
-            <button onClick={() => handleClick("English songs")}>English Songs</button>
-            <button onClick={() => handleClick("Hindi songs")}>Hindi Songs</button>
-            <button onClick={() => handleClick("Happy songs")}>Happy songs</button>
-            <button onClick={() => handleClick("Sad Songs")}>Sad Songs</button>
-            <button onClick={() => handleClick("sigma songs")}>Sigma Songs</button>
-            <button onClick={() => handleClick("DevotionaL Songs")}>Devotional Songs</button>
-            <button onClick={() => handleClick("Custom")}>Custom playlist</button>
-        </div>
-    );
+  useEffect(() => {
+    if (!userId) return;
 
+    fetch(`http://localhost:5000/playlists?user_id=${userId}`)
+      .then((res) => res.json())
+      .then((data) => setPlaylistspop(data))
+      .catch((err) => console.error(err));
+  }, [userId]);
 
+  const addToPlaylist = (playlistId) => {
+    fetch("http://localhost:5000/playlist/add-song", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        playlist_id: playlistId,
+        title: song.title,
+        artistname: song.artistname,
+        image: song.image,
+        previewurl: song.previewurl,
+      }),
+    })
+      .then((res) => res.json())
+      .then(() => {
+        onClose(); 
+      })
+      .catch((err) => console.error(err));
+  };
+
+  return (
+    <div className="maindivpopup">
+      {playlistspop.map((p) => (
+        <button
+          key={p.id}
+          className="popupbutton"
+          onClick={() => addToPlaylist(p.id)}
+        >
+          {p.name}
+        </button>
+      ))}
+    </div>
+  );
 }
 
 export default Popup;

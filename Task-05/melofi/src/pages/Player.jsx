@@ -1,50 +1,80 @@
 import Sidebar from "../components/Sidebar";
-import logo from "../assets/logoblack.png";
 import "../global.css";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import left from "../assets/left arrow.svg";
 import right from "../assets/right arrow.svg";
 import "./Player.css";
 import playlist from "../assets/playlist.svg";
-import lyrics from "../assets/lyrics.svg";
-import { Link } from "react-router-dom";
+import { useLocation, Navigate } from "react-router-dom";
 import ToggleImage from "../components/Toggle";
 import Popup from "../components/Popup";
 
 function Player() {
+  const { state } = useLocation();
+  const audioRef = useRef(null);
+  const [showPopup, setShowPopup] = useState(false);
+  const { title, image, artistname, previewurl } = state;
 
-    const [showPopup, setshowPopup] = useState(false);
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.play().catch(() => {
+        console.log("Autoplay blocked");
+      });
+    }
+  }, [previewurl]);
 
-    return (
-        <>
-        <div className="maindivplayer">
-            
-            <div className="sidebar">
-                <Sidebar/>
-            </div>
-            <div className="title">
-                <h1>Playing....</h1>
-            </div>
-            <div className = "photoplayer">
-                <img className = "playerphoto" src={logo} alt="photo"/>
-                <div className="playersong">Song Name</div>
-                <div className="controls">
-                    <img onClick={() => alert("playing previous song")} className="leftsvg" src={left} width="2500" alt="left arrow" style = {{cursor:"pointer"}}/>
-                    <ToggleImage/>
-                    <img onClick={() => alert("playing next song")}className = "rightsvg" src={right} width="2500"  alt="right arrow"style = {{cursor:"pointer"}}/>
-                    <img onClick={() => setshowPopup(!showPopup)}className = "playlistsvg" src = {playlist} width="1400" alt = "playlist adder" style = {{cursor:"pointer"}}/>
-                    <Link to="/Lyrics">
-                    <img className = "lyricssvg" src = {lyrics} width="100" alt = "lyrics button"style = {{cursor:"pointer"}}/>
-                    </Link>
-            
-                </div>
-                {showPopup && (
-                    <Popup closePopup={() => setshowPopup(false)} />
-                )}
-            </div>
+  return (
+    <div className="maindivplayer">
+      <div className="sidebar">
+        <Sidebar />
+      </div>
+      <div className="subdivplayer">
+        <img className="playerphoto" src={image} alt={title} />
+        <div className="playersong">
+          {title} <br/> ({artistname})
+        </div>   
+        <audio ref={audioRef} src={previewurl} controls hidden />
+        <div className="controls">
+          <img
+            onClick={() => alert("The Previous song navigation is currently unavailable ")}
+            className="leftsvg"
+            src={left}
+            width="150vw"
+            alt="previous" 
+            style={{ cursor: "pointer" }}
+          />
+          <ToggleImage audioRef={audioRef} />
+          <img
+            onClick={() => alert("The Next song navigation is currently unavailable")}
+            className="rightsvg"
+            src={right}
+            alt="next"
+            width="150vh"
+            style={{ cursor: "pointer" }}
+          />
+          <img
+            onClick={() => setShowPopup(!showPopup)}
+            className="playlistsvg"
+            src={playlist}
+            alt="playlist"
+            width="100vh"
+            style={{ cursor: "pointer" }}
+          />
         </div>
-        </>
-
-    );
+        {showPopup && (
+                  <Popup
+                    song={{
+                      title,
+                      artistname,
+                      image,
+                      previewurl,
+                    }}
+                    onClose={() => setShowPopup(false)}
+                  />
+                )}
+      </div>
+    </div>
+  );
 }
+
 export default Player;
