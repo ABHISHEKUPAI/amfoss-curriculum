@@ -16,6 +16,22 @@ function Playlistholder() {
       .catch((err) => console.error(err));
   }, [playlistId]);
 
+  const handleDeleteSong = (songId) => {
+    fetch(`http://localhost:5000/playlist/song/${songId}`, {
+      method: "DELETE",
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to delete song");
+        }
+
+        setSongs((prevSongs) =>
+          prevSongs.filter((song) => song.id !== songId)
+        );
+      })
+      .catch((err) => console.error(err));
+  };
+
   return (
     <div className="playlistholderpage">
       <Sidebar />
@@ -25,13 +41,15 @@ function Playlistholder() {
       </div>
 
       <div className="subdivolaylistholder">
-        {songs.length === 0 && <p>add songs to this playlist to view them here </p>}
+        {songs.length === 0 && (
+          <p>Add songs to this playlist to view them here</p>
+        )}
 
         {songs.map((song) => (
           <Playlistbar
-            key={song.id}
-            type="song"
+            key={song.id}        
             song={song}
+            onDelete={handleDeleteSong} 
           />
         ))}
       </div>

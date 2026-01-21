@@ -1,5 +1,5 @@
 import logo from "../assets/logo.png";
-import profile from "../assets/profile.png";
+import profile from "../assets/profilephoto.png";
 import "./Sidebar.css";
 import { Link } from "react-router-dom";
 
@@ -24,8 +24,7 @@ function Sidebar() {
                 <Link to="/Playlist">
                 <button className="btn-playlist">Playlist</button>
                 </Link>
-            </div>
-            
+            </div> 
             <img 
                 src={logo} 
                 alt="App Logo"

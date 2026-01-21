@@ -8,13 +8,11 @@ function Popup({ song, onClose }) {
 
   useEffect(() => {
     if (!userId) return;
-
     fetch(`http://localhost:5000/playlists?user_id=${userId}`)
       .then((res) => res.json())
       .then((data) => setPlaylistspop(data))
       .catch((err) => console.error(err));
   }, [userId]);
-
   const addToPlaylist = (playlistId) => {
     fetch("http://localhost:5000/playlist/add-song", {
       method: "POST",
@@ -33,7 +31,6 @@ function Popup({ song, onClose }) {
       })
       .catch((err) => console.error(err));
   };
-
   return (
     <div className="maindivpopup">
       {playlistspop.map((p) => (

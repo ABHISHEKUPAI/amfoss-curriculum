@@ -8,12 +8,10 @@
       justify-content: space-between;
       align-items: center;  
 }
-
 .profile-img {
    width: 10vw;
    border-radius: 50%;
 }
-
 .btngrp{
       display:flex;
       flex-direction: column;
@@ -25,9 +23,7 @@
    width: 15vw;
    padding: 30px;
    font-size: 3em;
-
 }
-
 .logo-img {
    width: 15vw;
 }

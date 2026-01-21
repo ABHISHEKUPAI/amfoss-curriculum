@@ -16,7 +16,7 @@ function Register() {
       setError("Passwords do not match");
       return;
     }
-    const response = await fetch("http://localhost:5000/Register", {
+    const response = await fetch("http://127.0.0.1:5000/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -31,7 +31,7 @@ function Register() {
       setError(data.error);
       return;
     }
-    navigate("/");
+    navigate("/home");
   };
   return (
     <div className="maindivregister">

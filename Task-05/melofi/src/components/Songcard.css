@@ -8,7 +8,6 @@
   flex-direction: column;
   align-items: center;
 }
-
 .photo {
   width: clamp(120px, 14vw, 170px);
   height: clamp(120px, 14vw, 170px);
@@ -17,8 +16,6 @@
   border-radius: 20px;
   object-fit: cover;
 }
-
-
 .name {
   margin-top: 12px;
   font-size: clamp(14px, 1.2vw, 18px);

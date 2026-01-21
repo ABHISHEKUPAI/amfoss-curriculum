@@ -5,7 +5,7 @@ import left from "../assets/left arrow.svg";
 import right from "../assets/right arrow.svg";
 import "./Player.css";
 import playlist from "../assets/playlist.svg";
-import { useLocation, Navigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import ToggleImage from "../components/Toggle";
 import Popup from "../components/Popup";
 

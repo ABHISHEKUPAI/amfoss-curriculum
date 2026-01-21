@@ -165,6 +165,16 @@ def add_song_to_plst():
         "song_id": cursor.lastrowid
     }), 201
 
+@app.route("/playlist/song/<int:song_id>", methods=["DELETE"])
+def delete_song_from_playlist(song_id):
+    cursor.execute(
+        "DELETE FROM playlist_songs WHERE id = %s",
+        (song_id,)
+    )
+    db.commit()
+    return jsonify({"message": "Song deleted"}), 200
+
+
 @app.route("/playlist/<int:playlist_id>/songs", methods=["GET"])
 def get_playlist_songs(playlist_id):
     cursor.execute(
@@ -177,20 +187,65 @@ def get_playlist_songs(playlist_id):
     )
     return jsonify(cursor.fetchall()), 200
 
+@app.route("/history", methods=["POST"])
+def add_history():
+    data = request.get_json()
 
+    user_id = data.get("user_id")
+    song_name = data.get("song_name")
+    artist_name = data.get("artist_name")
+    song_url = data.get("song_url")
+    song_image = data.get("song_image")
 
-@app.route("/playlist/<int:playlist_id>", methods=["DELETE"])
-def delete_playlist(playlist_id):
+    if not user_id or not song_name:
+        return jsonify({"error": "user_id and song_name required"}), 400
+
     cursor.execute(
-        "DELETE FROM playlist_songs WHERE playlist_id=%s",
-        (playlist_id,)
-    )
-    cursor.execute(
-        "DELETE FROM playlists WHERE id=%s",
-        (playlist_id,)
+        """
+        INSERT INTO user_history (user_id, song_name, artist_name, song_url, song_image)
+        VALUES (%s, %s, %s, %s,%s)
+        """,
+        (user_id, song_name, artist_name, song_url,song_image)
     )
     db.commit()
-    return jsonify({"message": "Playlist deleted"}), 200
+
+    return jsonify({
+        "message": "Song added to history",
+        "id": cursor.lastrowid
+    }), 201
+ 
+@app.route("/history/<int:user_id>", methods=["GET"])
+def get_history(user_id):
+    cursor.execute(
+        """
+        SELECT song_name, artist_name, song_url,song_image
+        FROM user_history
+        WHERE user_id=%s
+        ORDER BY id DESC
+        """,
+        (user_id,)
+    )
+    return jsonify(cursor.fetchall()), 200
+
+@app.route("/profile/<int:user_id>", methods=["GET"])
+def get_user_profile(user_id):
+    cursor.execute(
+        """
+        SELECT id, email
+        FROM users
+        WHERE id = %s
+        """,
+        (user_id,)
+    )
+    user = cursor.fetchone()
+
+    if not user:
+        return jsonify({"error": "User not found"}), 404
+
+    return jsonify({
+        "id": user["id"],
+        "email": user["email"]
+    }), 200
 
 
 if __name__ == "__main__":
