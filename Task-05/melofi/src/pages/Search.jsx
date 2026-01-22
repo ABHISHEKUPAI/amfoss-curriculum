@@ -50,7 +50,7 @@ function Search() {
                     <Songcard
                     key={index}
                     title={song.title}
-                    image={song.image}
+             // ✅ IMPORTANT: guard clause        image={song.image}
                     artistname={song.artistname}
                     previewurl={song.previewurl}
                     />

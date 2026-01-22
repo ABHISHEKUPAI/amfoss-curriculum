@@ -29,7 +29,10 @@ function Profile() {
         navigate("/");
       });
   }, [userId, navigate]);
- 
+
+  if (!profile) {
+    return <p style={{ padding: "20px" }}>Loading profile...</p>;
+  }
 
   return (
     <div className="maindivprofile">
